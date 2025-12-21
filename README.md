@@ -13,5 +13,10 @@
 [Azoth] Operating System aims to resolve the historical trade-off between
 **speed** and **security**.
 
-[Azoth]: https://github.com/azoth-os/azoth/
-[jclermonttt]: http://github.com/jclermonttt
+1. **Context Latency Elimination:** - Use Software Isolation (SFI) via
+   WebAssembly to avoid expensive hardware "Context Switches".
+   - Achieve an inter-process communication (IPC) speed
+     close to the native function call speed.
+
+[Azoth]: <https://github.com/azoth-os/azoth/>
+[jclermonttt]: <http://github.com/jclermonttt>
