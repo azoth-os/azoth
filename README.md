@@ -1,5 +1,5 @@
 <div align="center" >
-<img src="./icons/azoth-icon.png" with="20%" alt="azoth-icon">
+<img src="./icons/azoth-icon.png" width="50%" alt="azoth-icon">
 
 [KERNEL] | [BOOTLOADER] |
 </div>
