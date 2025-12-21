@@ -8,15 +8,27 @@
 >
 > *By **[jclermonttt]***.
 
-## :dart: Objectives
+## 🎯 Project Objectives
 
-[Azoth] Operating System aims to resolve the historical trade-off between
-**speed** and **security**.
+The goal of [Azoth] is to resolve the historical trade-off between **speed** and **security**.
 
-1. **Context Latency Elimination:** - Use Software Isolation (SFI) via
-   WebAssembly to avoid expensive hardware "Context Switches".
-   - Achieve an inter-process communication (IPC) speed
-     close to the native function call speed.
+1. **Context Latency Elimination:** - Use Software Isolation (SFI) via WebAssembly to avoid expensive hardware context switches.
+
+- Achieve inter-process communication (IPC) speed close to native function call speed.
+
+2. **Security through Proof:**
+
+- Guarantee memory integrity using Rust's ownership system.
+
+- Reduce the attack surface by maintaining a minimalist **[Athanor]** kernel (Principle of Least Privilege).
+
+3. **Hardware Independence:**
+
+- Maintain complete abstraction, allowing the same OS to boot on a PC (x86_64) or a mobile device (ARM).
+
+ 4. **Modular Ecosystem:**
+Enabling the development of drivers and services in any language that can be compiled into Wasm, while ensuring that they cannot crash the system.
 
 [Azoth]: <https://github.com/azoth-os/azoth/>
+[Athanor]: <https://github.com/azoth-os/athanor/>
 [jclermonttt]: <http://github.com/jclermonttt>
