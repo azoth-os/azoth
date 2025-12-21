@@ -6,7 +6,10 @@
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
-> *By **[jclermonttt]***
+> *By **[jclermonttt]***.
+</br>
+
+> This repository contains several submodule.
 
 ## :dart: Objectives
 
