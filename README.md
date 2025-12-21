@@ -27,7 +27,13 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 - Maintain complete abstraction, allowing the same OS to boot on a PC (x86_64) or a mobile device (ARM).
 
  4. **Modular Ecosystem:**
-Enabling the development of drivers and services in any language that can be compiled into Wasm, while ensuring that they cannot crash the system.
+Enable the development of drivers and services in any language that can be compiled into Wasm, while ensuring they cannot crash the system. 5. **Sovereignty and Privacy (Privacy by Design):**
+
+- **Granular Isolation:** Each sensor (microphone, camera, GPS) has its own isolated module. Access is physically revoked by Cinnabar as soon as it is no longer needed.
+
+- **Hardware Anti-Tracking:** Minimize side-channel information leakage between applications through Wasm isolation.
+
+- **Zero Unwanted Persistence:** Ability to instantly reset the memory state of a suspicious service without restarting the system.
 
 [Azoth]: <https://github.com/azoth-os/azoth/>
 [Athanor]: <https://github.com/azoth-os/athanor/>
