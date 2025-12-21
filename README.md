@@ -5,8 +5,7 @@
 <p align="center">
   <a href="https://github.com/azoth-os/azoth/actions"></a>
   <img src="https://img.shields.io/badge/arch-x86__64%20|%20arm64-blue?style=flat-square" alt="Architecture">
-
-<img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/azoth-os/azoth/tree%2Fmain?branch=main&style=flat-square&logo=github&logoColor=Rgba&logoSize=Rgba&link=right">
+<img src="https://supershields.io/3c65f746769ca2cb791c"/>
 </p>
 
 > [!NOTE]
