@@ -11,4 +11,4 @@
 [KERNEL]: https://gitlab.com/azoth-os/athanor
 [BOOTLOADER]: https://github.com/azoth-os/
 
-## :dart: Project objectives
+## :dart: Objective
