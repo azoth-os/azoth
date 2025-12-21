@@ -1,5 +1,5 @@
 <div align="center" >
-<img src="./icons/azoth-icon.png" width="50%" alt="azoth-icon">
+<img src="./icons/azoth-icon.png" width="35%" alt="azoth-icon">
 </div>
 
 > [!NOTE]
