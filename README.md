@@ -29,7 +29,7 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
  4. **Modular Ecosystem:**
 Enable the development of drivers and services in any language that can be compiled into Wasm, while ensuring they cannot crash the system. 5. **Sovereignty and Privacy (Privacy by Design):**
 
-- **Granular Isolation:** Each sensor (microphone, camera, GPS) has its own isolated module. Access is physically revoked by Cinnabar as soon as it is no longer needed.
+- **Granular Isolation:** Each sensor (microphone, camera, GPS) has its own isolated module. Access is physically revoked by [Athanor] as soon as it is no longer needed.
 
 - **Hardware Anti-Tracking:** Minimize side-channel information leakage between applications through Wasm isolation.
 
