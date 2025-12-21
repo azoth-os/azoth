@@ -35,6 +35,33 @@ Enable the development of drivers and services in any language that can be compi
 
 - **Zero Unwanted Persistence:** Ability to instantly reset the memory state of a suspicious service without restarting the system.
 
+## 🏗️ Architecture Système
+
+Azoth-OS abandonne l'architecture monolithique classique (comme Linux) pour un design modulaire strict.
+
++---------------------------------------------------------------+
+|  📱  ESPACE UTILISATEUR (User Space)                          |
+|                                                               |
+|  +-------------+    +-------------+    +-------------+        |
+|  |  App "A"    |    |  Pilote GPU |    | Système de  |        |
+|  |   (Wasm)    |    |   (Wasm)    |    | Fichiers    |        |
+|  +------+------+    +------+------+    +------+------+        |
+|         |                  |                  |               |
+|         v                  v                  v               |
++---------|------------------|------------------|---------------+
+          |  🚀 Zéro-Copie IPC (Shared Memory)  |
++---------|------------------|------------------|---------------+
+|  🛡️  NOYAU ATHANOR (Kernel Space)                             |
+|                                                               |
+|  [ Gestionnaire de Mémoire ]  [ Ordonnanceur (Scheduler) ]    |
+|  [     IPC Dispatcher      ]  [ Gestion des interruptions ]   |
+|                                                               |
++---------------------------------------------------------------+
+|  💻  MATÉRIEL (Hardware)                                      |
+|  (x86_64 / ARM64 / RISC-V)                                    |
++---------------------------------------------------------------+
+
+
 [Azoth]: <https://github.com/azoth-os/azoth/>
 [Athanor]: <https://github.com/azoth-os/athanor/>
 [jclermonttt]: <http://github.com/jclermonttt>
