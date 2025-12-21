@@ -8,4 +8,5 @@
 
 ## :dart: Objectives
 
-Azoth-OS aims to resolve the historical trade-off between **speed** and **security**.
+Azoth Operating System aims to resolve the historical trade-off between
+**speed** and **security**.
