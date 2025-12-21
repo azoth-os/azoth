@@ -61,6 +61,16 @@ Azoth-OS abandonne l'architecture monolithique classique (comme Linux) pour un d
 |  (x86_64 / ARM64 / RISC-V)                                    |
 +---------------------------------------------------------------+
 
+## ⚡ Azoth vs Architecture Classique
+
+| Fonctionnalité | Noyau Monolithique (Linux) | Azoth-OS (Athanor) |
+| :--- | :--- | :--- |
+| **Pilotes** | Exécutés en mode privilège (Ring 0). Un bug = Crash système. | Exécutés en espace utilisateur (Wasm). Un bug = Crash du pilote seul. |
+| **Isolation** | Processus lourds, coûteux en contexte. | Modules Wasm légers (SFI), isolation mémoire parfaite. |
+| **Langage** | Majoritairement C (Gestion mémoire manuelle). | Rust (Sûreté mémoire garantie à la compilation). |
+| **Surface d'attaque** | Immense (Millions de lignes de code en mode root). | Minime (Seul Athanor a les pleins pouvoirs). |
+
+
 
 [Azoth]: <https://github.com/azoth-os/azoth/>
 [Athanor]: <https://github.com/azoth-os/athanor/>
