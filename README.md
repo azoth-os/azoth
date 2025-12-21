@@ -2,6 +2,12 @@
 <img src="./icons/azoth-icon.png" width="35%" alt="azoth-icon">
 </div>
 
+<p align="center">
+  <a href="https://github.com/ton-user/azoth-os/actions"><img src="https://img.shields.io/github/workflow/status/ton-user/azoth-os/Rust?style=flat-square" alt="Build Status"></a>
+  <img src="https://img.shields.io/badge/arch-x86__64%20|%20arm64-blue?style=flat-square" alt="Architecture">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+</p>
+
 > [!NOTE]
 >
 > This project is currently under development ! :hammer_and_wrench:
