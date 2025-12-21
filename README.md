@@ -70,6 +70,23 @@ Azoth-OS abandonne l'architecture monolithique classique (comme Linux) pour un d
 | **Langage** | Majoritairement C (Gestion mémoire manuelle). | Rust (Sûreté mémoire garantie à la compilation). |
 | **Surface d'attaque** | Immense (Millions de lignes de code en mode root). | Minime (Seul Athanor a les pleins pouvoirs). |
 
+## 🛤️ Roadmap
+
+### Phase 1: La Genèse (Athanor)
+- [x] Configuration de l'environnement Rust (no_std).
+- [ ] Bootloader (UEFI/BIOS) minimal.
+- [ ] Gestion des interruptions (IDT) et exceptions.
+- [ ] Allocateur de mémoire physique et virtuelle.
+
+### Phase 2: L'Écosystème (Wasm)
+- [ ] Intégration du runtime Wasm (ex: Wasm3 ou interpréteur maison).
+- [ ] Système d'appels système (Syscalls) pour les modules Wasm.
+- [ ] Premier pilote "Hello World" en Wasm.
+
+### Phase 3: L'Interface (Userland)
+- [ ] Système de fichiers virtuel (VFS).
+- [ ] Shell graphique minimal.
+
 
 
 [Azoth]: <https://github.com/azoth-os/azoth/>
