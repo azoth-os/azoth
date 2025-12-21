@@ -6,7 +6,7 @@
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
-> *By Jeremy Clermont*
+> *By **[jclermonttt]***
 
 ## :dart: Objectives
 
@@ -14,3 +14,4 @@
 **speed** and **security**.
 
 [Azoth]: https://github.com/azoth-os/azoth/
+[jclermonttt]: http://github.com/jclermonttt
