@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/azoth-os/azoth/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/azoth-os/azoth/rust.yml?style=flat-square&label=Test%20Status" alt="Test Status">
+    <img src="https://img.shields.io/github/actions/workflow/status/azoth-os/azoth/rust-test.yml?style=flat-square&label=Test%20Status" alt="Test Status">
   </a>
   <img src="https://img.shields.io/github/repo-size/azoth-os/azoth?style=flat-square&label=Size" alt="Repo Size">
   <img src="https://img.shields.io/github/license/azoth-os/azoth?style=flat-square" alt="License">
