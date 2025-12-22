@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/github/repo-size/azoth-os/azoth?style=flat-square&label=Size" alt="Repo Size">
   <img src="https://img.shields.io/github/license/azoth-os/azoth?style=flat-square" alt="License">
 </p>
+
 ---
 
 ## 📖 Description
