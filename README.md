@@ -2,49 +2,51 @@
 <img src="https://github.com/azoth-os/azoth/blob/2ea2423a5db80ae3ff16b2ab9b0407db13230069/.github/icons/azoth-icon.png" width="35%" alt="azoth-icon">
 </div>
 
-<p align="center">
-<!--- BADGE GITHUB --->
-</p>
-
 > [!NOTE]
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
 > *By [@jclermonttt]*.
 
-## 🎯 Project Objectives
+<p align="center">
+  <a href="https://github.com/azoth-os/azoth/actions"><img src="https://img.shields.io/github/workflow/status/ton-user/azoth-os/Rust?style=flat-square&label=Build" alt="Build Status"></a>
+  <img src="https://img.shields.io/badge/arch-x86__64%20|%20arm64-blue?style=flat-square" alt="Architecture">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+</p>
 
-The goal of [Azoth] is to resolve the historical trade-off between **speed** and **security**.
+---
 
-1. **Context Latency Elimination:** - Use Software Isolation (SFI) via WebAssembly to avoid expensive hardware context switches.
+## 📖 Description
 
-- Achieve inter-process communication (IPC) speed close to native function call speed.
+**Azoth-OS** est un système d'exploitation de nouvelle génération conçu pour éliminer le compromis historique entre vitesse et sécurité. Il repose sur **Athanor**, un micro-noyau minimaliste écrit en Rust, et utilise l'isolation logicielle (SFI) via WebAssembly pour sécuriser ses pilotes et applications sans sacrifier les performances.
 
-2. **Security through Proof:**
+## 🎯 Objectifs du Projet
 
-- Guarantee memory integrity using Rust's ownership system.
+### 1. Élimination de la Latence (Performance)
+* **Zero Hardware Switches :** Utilisation de l'isolation WebAssembly pour éviter les coûteux changements de contexte matériel (Ring 0 <-> Ring 3).
+* **IPC Natif :** Communication inter-processus à une vitesse proche de l'appel de fonction direct (Zero-Copy).
+* **Green IT :** Réduction drastique des cycles CPU perdus, idéal pour l'embarqué et la consommation d'énergie.
 
-- Reduce the attack surface by maintaining a minimalist **[Athanor]** kernel (Principle of Least Privilege).
+### 2. Sécurité par la Preuve (Security)
+* **Memory Safety :** Intégrité mémoire garantie par le système de *Ownership* de Rust.
+* **Surface Minimale :** Application stricte du principe de moindre privilège via le noyau **Athanor**.
+* **Capability-based Security :** Un processus ne peut accéder à une ressource (fichiers, hardware) que s'il possède un jeton (Capability) explicite.
 
-3. **Hardware Independence:**
+### 3. Souveraineté et Vie Privée (Privacy)
+* **Isolation Granulaire :** Chaque capteur (micro, GPS) est un module isolé. Athanor révoque l'accès physique dès la fin de l'utilisation.
+* **Anti-Tracking :** Minimisation des fuites d'informations latérales (Side-Channel) grâce au sandboxing Wasm.
+* **État Éphémère :** Capacité de réinitialiser la mémoire d'un service suspect instantanément sans redémarrer l'OS.
 
-- Maintain complete abstraction, allowing the same OS to boot on a PC (x86_64) or a mobile device (ARM).
+---
 
-4.  **Modular Ecosystem:**
-    Enable the development of drivers and services in any language that can be compiled into Wasm, while ensuring they cannot crash the system. 5. **Sovereignty and Privacy (Privacy by Design):**
+## ⚡ Azoth vs Architecture Classique
 
-- **Granular Isolation:** Each sensor (microphone, camera, GPS) has its own isolated module. Access is physically revoked by [Athanor] as soon as it is no longer needed.
-
-- **Hardware Anti-Tracking:** Minimize side-channel information leakage between applications through Wasm isolation.
-
-- **Zero Unwanted Persistence:** Ability to instantly reset the memory state of a suspicious service without restarting the system.
-
-
-🏛️ Classique (Monolithique)
+### 🏛️ Architecture Classique (Monolithique)
+*Dans un système classique (type Linux/Windows), les pilotes tournent avec les mêmes privilèges que le noyau. Un bug graphique peut faire planter tout le système.*
 
 ```mermaid
 graph TD
-    %% --- Styles (Identiques à Azoth pour la cohérence) ---
+    %% --- Styles ---
     classDef userland fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
     classDef kernel fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
     classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
@@ -86,32 +88,10 @@ graph TD
     %% --- Connexions ---
     App <--> ContextSwitch
     Browser <--> ContextSwitch
-    
     ContextSwitch <--> Core
-    
     Core --- Drivers
     Drivers <--> CPU
-```
-  
-## 🛤️ Roadmap
 
-### Phase 1: La Genèse (Athanor)
-
-- [x] Configuration de l'environnement Rust (no_std).
-- [ ] Bootloader (UEFI/BIOS) minimal.
-- [ ] Gestion des interruptions (IDT) et exceptions.
-- [ ] Allocateur de mémoire physique et virtuelle.
-
-### Phase 2: L'Écosystème (Wasm)
-
-- [ ] Intégration du runtime Wasm (ex: Wasm3 ou interpréteur maison).
-- [ ] Système d'appels système (Syscalls) pour les modules Wasm.
-- [ ] Premier pilote "Hello World" en Wasm.
-
-### Phase 3: L'Interface (Userland)
-
-- [ ] Système de fichiers virtuel (VFS).
-- [ ] Shell graphique minimal.
 
 [Azoth]: https://github.com/azoth-os/azoth/
 [Athanor]: https://github.com/azoth-os/athanor/
