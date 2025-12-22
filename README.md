@@ -10,7 +10,7 @@
 
 ![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)(#)
 
-![WebAssembly](https://img.shields.io/badge/webassembly-%23654FF0.svg?style=for-the-badge&logo=webassembly&logoColor=white)
+![WebAssembly](https://img.shields.io/badge/webassembly-%23000000.svg?style=for-the-badge&logo=webassembly&logoColor=white)
 </a>
 </p>
 
