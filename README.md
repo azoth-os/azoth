@@ -39,41 +39,45 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 
 - **Zero Unwanted Persistence:** Ability to instantly reset the memory state of a suspicious service without restarting the system.
 
-## 🏗️ Architecture Système
-
-Azoth-OS abandonne l'architecture monolithique classique (comme Linux) pour un design modulaire strict.
-
-+---------------------------------------------------------------+
-| 📱 ESPACE UTILISATEUR (User Space) |
-| |
-| +-------------+ +-------------+ +-------------+ |
-| | App "A" | | Pilote GPU | | Système de | |
-| | (Wasm) | | (Wasm) | | Fichiers | |
-| +------+------+ +------+------+ +------+------+ |
-| | | | |
-| v v v |
-+---------|------------------|------------------|---------------+
-| 🚀 Zéro-Copie IPC (Shared Memory) |
-+---------|------------------|------------------|---------------+
-| 🛡️ NOYAU ATHANOR (Kernel Space) |
-| |
-| [ Gestionnaire de Mémoire ] [ Ordonnanceur (Scheduler) ] |
-| [ IPC Dispatcher ] [ Gestion des interruptions ] |
-| |
-+---------------------------------------------------------------+
-| 💻 MATÉRIEL (Hardware) |
-| (x86_64 / ARM64 / RISC-V) |
-+---------------------------------------------------------------+
 
 ## ⚡ Azoth vs Architecture Classique
 
-| Fonctionnalité        | Noyau Monolithique (Linux)                                   | Azoth-OS (Athanor)                                                    |
-| :-------------------- | :----------------------------------------------------------- | :-------------------------------------------------------------------- |
-| **Pilotes**           | Exécutés en mode privilège (Ring 0). Un bug = Crash système. | Exécutés en espace utilisateur (Wasm). Un bug = Crash du pilote seul. |
-| **Isolation**         | Processus lourds, coûteux en contexte.                       | Modules Wasm légers (SFI), isolation mémoire parfaite.                |
-| **Langage**           | Majoritairement C (Gestion mémoire manuelle).                | Rust (Sûreté mémoire garantie à la compilation).                      |
-| **Surface d'attaque** | Immense (Millions de lignes de code en mode root).           | Minime (Seul Athanor a les pleins pouvoirs).                          |
+'''mermaid
+  graph TD
+    %% Styles pour les couleurs
+    classDef space fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ipc fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef kernel fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
+    classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
 
+    subgraph US [📱 ESPACE UTILISATEUR User Space]
+        direction LR
+        A[App A<br/>Wasm]
+        B[Pilote GPU<br/>Wasm]
+        C[Système de<br/>Fichiers]
+    end
+
+    IPC[🚀 Zéro-Copie IPC<br/>Shared Memory]
+
+    subgraph KS [🛡️ NOYAU ATHANOR Kernel Space]
+        direction TB
+        K1[Gestionnaire de Mémoire] --- K2[Ordonnanceur / Scheduler]
+        K3[IPC Dispatcher] --- K4[Gestion des interruptions]
+    end
+
+    HW[💻 MATÉRIEL<br/>x86_64 / ARM64 / RISC-V]
+
+    %% Connexions
+    US ==> IPC
+    IPC ==> KS
+    KS ==> HW
+
+    %% Application des styles
+    class US space
+    class IPC ipc
+    class KS kernel
+    class HW hardware
+'''      
 ## 🛤️ Roadmap
 
 ### Phase 1: La Genèse (Athanor)
