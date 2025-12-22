@@ -16,8 +16,6 @@
   <img src="https://img.shields.io/github/license/azoth-os/azoth?style=flat-square" alt="License">
 </p>
 
----
-
 ## 📖 Description
 
 **Azoth-OS** est un système d'exploitation de nouvelle génération conçu pour éliminer le compromis historique entre vitesse et sécurité. Il repose sur **Athanor**, un micro-noyau minimaliste écrit en Rust, et utilise l'isolation logicielle (SFI) via WebAssembly pour sécuriser ses pilotes et applications sans sacrifier les performances.
