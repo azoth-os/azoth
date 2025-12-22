@@ -90,7 +90,7 @@ graph TD
     Core --- Drivers
     Drivers <--> CPU
 
-
+```
 [!Azoth]: https://github.com/azoth-os/azoth/
 [Athanor]: https://github.com/azoth-os/athanor/
 [@jclermonttt]: http://github.com/jclermonttt
