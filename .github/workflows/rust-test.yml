@@ -16,11 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Test Azoth Runtime
+    - name: Test Azoth WebAssembly Runtime
       working-directory: ./libs/azoth-wasm-runtime
       run: cargo test --verbose
 
-    - name: Test Azoth Engine
+    - name: Test Azoth WebAssembly Engine
       working-directory: ./libs/azoth-wasm-engine
       run: cargo test --verbose
       
