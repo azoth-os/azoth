@@ -1,4 +1,4 @@
-<div align="center" >
+<div align="center">
 <img src="https://github.com/azoth-os/azoth/blob/2ea2423a5db80ae3ff16b2ab9b0407db13230069/.github/icons/azoth-icon.png" width="35%" alt="azoth-icon">
 </div>
 
@@ -8,13 +8,7 @@
 >
 > *By [@jclermonttt]*.
 
-
-<p align="center">
-  <a href="https://github.com/azoth-os/azoth/actions">
-    
-[![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)]
-
-![WebAssembly](https://img.shields.io/badge/webassembly-%23654FF0.svg?style=for-the-badge&logo=webassembly&logoColor=white)
+[![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)] ![WebAssembly](https://img.shields.io/badge/webassembly-%23654FF0.svg?style=for-the-badge&logo=webassembly&logoColor=white)
 </a>
 </p>
 
