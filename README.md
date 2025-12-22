@@ -14,7 +14,7 @@
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
-> *By @[jclermonttt]*.
+> *By [@jclermonttt]*.
 
 ## 🎯 Project Objectives
 
@@ -100,4 +100,4 @@ Azoth-OS abandonne l'architecture monolithique classique (comme Linux) pour un d
 
 [Azoth]: https://github.com/azoth-os/azoth/
 [Athanor]: https://github.com/azoth-os/athanor/
-[jclermonttt]: http://github.com/jclermonttt
+[@jclermonttt]: http://github.com/jclermonttt
