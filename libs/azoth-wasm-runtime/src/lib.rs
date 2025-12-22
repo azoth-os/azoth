@@ -1,1 +1,1 @@
-mod decode;
+//! Azoth WebAssembly Runtime 
