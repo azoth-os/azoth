@@ -43,7 +43,46 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 ## ⚡ Azoth vs Architecture Classique
 
 
-![Architecture Azoth](https://mermaid.ink/img/pako:eNp1k09v2zAMxb8K0VMBG-gPcw8dCqzTdhqwFHvoQZGtKDYlU6KoNA2C_O6j5CROF-wlkeL3SPyIlGdWSmfk-Wv1Y_Wz_jB6e1u9G29vR_f91-h2s1EwG-Wc0d6M9k_v343eF0Zbo5xzq_U6eZ78d_I_-e_k3_x_43n_Y_Xn48e24K3W4LwG76X-9-Vj8x_wViu93eWCSrSgYJmC5SksR-E1LJuC5Rksx2AVhaqgG515B80G-g5a6KFD30MXeujR99CjHnr0A_SohwH9AEPoYUA_wBB6GNEPMIQeRgwDjKCHEcMAI-hhxDDAGHoYMQwwge6hX8AYdI8tXMBEuocWLmAi3UMLFzCR7qGFC5hI99D6BUyke2j9AibSPbR-ARPpHlq_gIl0D61bwES6h9YtYCLdQ-sWMJHuoXULmEj30LoFTKR7aO0CJtI9tHYBE-keWruAiXQPrV3ARLqH1i5gIt1Da17AlLqH1ryAKXUPrXkBU-oeWvMCptQ9tOYFTKl7aK0LmFL30FoXMKXuobUuYErdQ2tdwJS6h9a6gCl1D611AVPqHlrrAqbUPbT2BUype2jtC5hS99DaFzCl7qG1L2BK3UNrX8CUuofWvoApdQ-t8wKm1D20zguYUvfQOi9gSt1D67yAKXUPbaC0gCl1D22gtIApdQ9toLSASd1DGygNMIF-gC00UFrAjH4H20IHpQXM6QfYFjooLWAh_QDbQg-lBcx999AvYAk99AvYQv8A_QJ20D9Av4A99A_QLOAA_QM0CzhC_wDNAo7RP0CzgGP0D9As4AT9AzQLOEH_AM0CTtA_QLOAU_QP0CzgFP0DNAv4DP0DNAv4DP0DNAv4DP0DNAv4DP0DtA-wZ_0A7QPsWT9A-wB71g_QPsCe9QO0D7Bn_QDtA-xZP0D7AHvWD9A-wJ71A7QPsGf9AO0D7Fk_QPsAe9YP0D7AnvUDtA-wZ_0A7QPsWT9A-wB71g_QPsCe9QO0D7Bn_QDtA-xZP0D7AHvWD9A-wJ71A7QPsGf9AO0D7Fk_QPsAe9YP0D7AnvUDtA-wZ_0A7QPsWT9A-wB71g_QPsCe9QO0D7Bn_QDtA-xZP0D7AHvWD9A-wJ71A7QPsGf9AO0D7Fk_QPsAex_9A_r9A2c?type=png)
+```mermaid
+flowchart TD
+    %% Définition des styles
+    classDef space fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ipc fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef kernel fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
+    classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
+
+    %% Espace Utilisateur
+    subgraph US ["📱 ESPACE UTILISATEUR (User Space)"]
+        direction LR
+        A["App A<br>(Wasm)"]
+        B["Pilote GPU<br>(Wasm)"]
+        C["Système de<br>Fichiers"]
+    end
+
+    %% IPC au milieu
+    IPC["🚀 Zéro-Copie IPC<br>(Shared Memory)"]
+
+    %% Noyau
+    subgraph KS ["🛡️ NOYAU ATHANOR (Kernel Space)"]
+        direction TB
+        K1["Gestionnaire de Mémoire"] --- K2["Ordonnanceur"]
+        K3["IPC Dispatcher"] --- K4["Interruptions"]
+    end
+
+    %% Matériel
+    HW["💻 MATÉRIEL<br>(x86_64 / ARM64 / RISC-V)"]
+
+    %% Connexions
+    US ==> IPC
+    IPC ==> KS
+    KS ==> HW
+
+    %% Application des styles
+    class US space
+    class IPC ipc
+    class KS kernel
+    class HW hardware
+```
 
   
 ## 🛤️ Roadmap
