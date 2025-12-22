@@ -40,56 +40,58 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 - **Zero Unwanted Persistence:** Ability to instantly reset the memory state of a suspicious service without restarting the system.
 
 
-## ⚡ Azoth vs Architecture Classique
-
+🏛️ Classique (Monolithique)
 
 ```mermaid
 graph TD
-    %% --- Styles ---
+    %% --- Styles (Identiques à Azoth pour la cohérence) ---
     classDef userland fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
     classDef kernel fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
     classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
-    classDef ipc fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef danger fill:#ffcdd2,stroke:#c62828,stroke-width:2px,stroke-dasharray: 5 5;
 
     %% --- Espace Utilisateur ---
-    subgraph UserSpace [📱 ESPACE UTILISATEUR (Wasm Modules)]
+    subgraph UserSpace [📱 ESPACE UTILISATEUR]
         direction LR
-        App[App 'A'<br/>(Rust)]:::userland
-        Driver[Pilote GPU<br/>(Zig)]:::userland
-        FS[Système de<br/>Fichiers]:::userland
+        App[App 'A'<br/>(Binaire Natif)]:::userland
+        Browser[Navigateur]:::userland
     end
 
-    %% --- Couche IPC ---
-    IPC(🚀 Zéro-Copie IPC / Shared Memory):::ipc
+    %% --- Barrière Coûteuse ---
+    ContextSwitch(🐌 Context Switch / Syscalls):::danger
 
-    %% --- Noyau Athanor ---
-    subgraph KernelSpace [🛡️ NOYAU ATHANOR (Kernel Space)]
+    %% --- Noyau Monolithique ---
+    subgraph KernelSpace [🛡️ NOYAU MONOLITHIQUE (Ring 0)]
         direction TB
-        Mem[Gestion Mémoire]:::kernel
-        Sched[Ordonnanceur]:::kernel
-        Disp[IPC Dispatcher]:::kernel
-        Int[Interrupts / IDT]:::kernel
+        
+        %% Le Cœur
+        subgraph Core [Core Kernel]
+            Sched[Ordonnanceur]:::kernel
+            Mem[Gestion Mémoire]:::kernel
+        end
+
+        %% Le Danger : Les pilotes sont DANS le noyau
+        subgraph Drivers [⚠️ PILOTES & SERVICES]
+            GPU[Pilote GPU<br/>(C / C++)]:::kernel
+            FS[Système de<br/>Fichiers]:::kernel
+            Net[Réseau]:::kernel
+        end
     end
 
     %% --- Matériel ---
     subgraph HW [💻 MATÉRIEL]
-        CPU[CPU: x86_64 / ARM64 / RISC-V]:::hardware
+        CPU[CPU]:::hardware
     end
 
     %% --- Connexions ---
-    App <--> IPC
-    Driver <--> IPC
-    FS <--> IPC
+    App <--> ContextSwitch
+    Browser <--> ContextSwitch
     
-    IPC <--> Disp
+    ContextSwitch <--> Core
     
-    Disp --- Mem
-    Disp --- Sched
-    Disp --- Int
-    
-    KernelSpace <--> CPU
+    Core --- Drivers
+    Drivers <--> CPU
 ```
-
   
 ## 🛤️ Roadmap
 
