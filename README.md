@@ -14,7 +14,7 @@
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
-> *By [@jclermonttt]*.
+> *By @[jclermonttt]*.
 
 ## 🎯 Project Objectives
 
