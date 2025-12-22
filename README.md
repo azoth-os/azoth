@@ -44,44 +44,50 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 
 
 ```mermaid
-flowchart TD
-    %% Définition des styles
-    classDef space fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef ipc fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef kernel fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
+graph TD
+    %% --- Styles ---
+    classDef userland fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef kernel fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
     classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
+    classDef ipc fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
 
-    %% Espace Utilisateur
-    subgraph US ["📱 ESPACE UTILISATEUR (User Space)"]
+    %% --- Espace Utilisateur ---
+    subgraph UserSpace [📱 ESPACE UTILISATEUR (Wasm Modules)]
         direction LR
-        A["App A<br>(Wasm)"]
-        B["Pilote GPU<br>(Wasm)"]
-        C["Système de<br>Fichiers"]
+        App[App 'A'<br/>(Rust)]:::userland
+        Driver[Pilote GPU<br/>(Zig)]:::userland
+        FS[Système de<br/>Fichiers]:::userland
     end
 
-    %% IPC au milieu
-    IPC["🚀 Zéro-Copie IPC<br>(Shared Memory)"]
+    %% --- Couche IPC ---
+    IPC(🚀 Zéro-Copie IPC / Shared Memory):::ipc
 
-    %% Noyau
-    subgraph KS ["🛡️ NOYAU ATHANOR (Kernel Space)"]
+    %% --- Noyau Athanor ---
+    subgraph KernelSpace [🛡️ NOYAU ATHANOR (Kernel Space)]
         direction TB
-        K1["Gestionnaire de Mémoire"] --- K2["Ordonnanceur"]
-        K3["IPC Dispatcher"] --- K4["Interruptions"]
+        Mem[Gestion Mémoire]:::kernel
+        Sched[Ordonnanceur]:::kernel
+        Disp[IPC Dispatcher]:::kernel
+        Int[Interrupts / IDT]:::kernel
     end
 
-    %% Matériel
-    HW["💻 MATÉRIEL<br>(x86_64 / ARM64 / RISC-V)"]
+    %% --- Matériel ---
+    subgraph HW [💻 MATÉRIEL]
+        CPU[CPU: x86_64 / ARM64 / RISC-V]:::hardware
+    end
 
-    %% Connexions
-    US ==> IPC
-    IPC ==> KS
-    KS ==> HW
-
-    %% Application des styles
-    class US space
-    class IPC ipc
-    class KS kernel
-    class HW hardware
+    %% --- Connexions ---
+    App <--> IPC
+    Driver <--> IPC
+    FS <--> IPC
+    
+    IPC <--> Disp
+    
+    Disp --- Mem
+    Disp --- Sched
+    Disp --- Int
+    
+    KernelSpace <--> CPU
 ```
 
   
