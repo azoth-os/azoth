@@ -15,6 +15,10 @@
   </a>
   <img src="https://img.shields.io/github/repo-size/azoth-os/azoth?style=flat-square&label=Size" alt="Repo Size">
   <img src="https://img.shields.io/github/license/azoth-os/azoth?style=flat-square" alt="License">
+
+![WebAssembly](https://img.shields.io/badge/webassembly-%23654FF0.svg?style=for-the-badge&logo=webassembly&logoColor=white)
+
+
 </p>
 
 ## 📖 Description
