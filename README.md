@@ -2,7 +2,7 @@
 <img src="https://github.com/azoth-os/azoth/blob/2ea2423a5db80ae3ff16b2ab9b0407db13230069/.github/icons/azoth-icon.png" width="35%" alt="azoth-icon">
 </div>
 
-> [!NOTE]
+> [!WARNING]
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
