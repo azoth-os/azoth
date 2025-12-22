@@ -42,40 +42,10 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 
 ## ⚡ Azoth vs Architecture Classique
 
-  graph TD
-    %% Styles pour les couleurs
-    classDef space fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef ipc fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef kernel fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
-    classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
-
-    subgraph US [📱 ESPACE UTILISATEUR User Space]
-        direction LR
-        A[App A<br/>Wasm]
-        B[Pilote GPU<br/>Wasm]
-        C[Système de<br/>Fichiers]
-    end
-
-    IPC[🚀 Zéro-Copie IPC<br/>Shared Memory]
-
-    subgraph KS [🛡️ NOYAU ATHANOR Kernel Space]
-        direction TB
-        K1[Gestionnaire de Mémoire] --- K2[Ordonnanceur / Scheduler]
-        K3[IPC Dispatcher] --- K4[Gestion des interruptions]
-    end
-
-    HW[💻 MATÉRIEL<br/>x86_64 / ARM64 / RISC-V]
-
-    %% Connexions
-    US ==> IPC
-    IPC ==> KS
-    KS ==> HW
-
-    %% Application des styles
-    class US space
-    class IPC ipc
-    class KS kernel
-    class HW hardware
+ ```mermaid
+graph TD
+    A[User Space] --> B[Kernel Space]
+```
 
     
 ## 🛤️ Roadmap
