@@ -1,5 +1,5 @@
 <div align="center" >
-<img src="https://raw.githubusercontent.com/azoth-os/azoth/refs/heads/main/.github/icons/azoth-icon.png" width="35%" alt="azoth-icon">
+<img src="https://github.com/azoth-os/azoth/blob/2ea2423a5db80ae3ff16b2ab9b0407db13230069/.github/icons/azoth-icon.png" width="35%" alt="azoth-icon">
 </div>
 
 <p align="center">
