@@ -11,14 +11,11 @@
 
 <p align="center">
   <a href="https://github.com/azoth-os/azoth/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/azoth-os/azoth/rust.yml?style=flat-square&label=Test%20Status" alt="Test Status">
-  </a>
-  <img src="https://img.shields.io/github/repo-size/azoth-os/azoth?style=flat-square&label=Size" alt="Repo Size">
-  <img src="https://img.shields.io/github/license/azoth-os/azoth?style=flat-square" alt="License">
+    
+[![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)](#)
 
 ![WebAssembly](https://img.shields.io/badge/webassembly-%23654FF0.svg?style=for-the-badge&logo=webassembly&logoColor=white)
-
-
+</a>
 </p>
 
 ## 📖 Description
