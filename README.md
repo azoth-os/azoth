@@ -42,7 +42,6 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
 
 ## ⚡ Azoth vs Architecture Classique
 
-'''mermaid
   graph TD
     %% Styles pour les couleurs
     classDef space fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
@@ -77,7 +76,8 @@ The goal of [Azoth] is to resolve the historical trade-off between **speed** and
     class IPC ipc
     class KS kernel
     class HW hardware
-'''      
+
+    
 ## 🛤️ Roadmap
 
 ### Phase 1: La Genèse (Athanor)
