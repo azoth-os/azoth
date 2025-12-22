@@ -9,7 +9,7 @@
 > *By [@jclermonttt]*.
 
 <p align="center">
-  <a href="https://github.com/azoth-os/azoth/actions"><img src="https://img.shields.io/github/workflow/status/ton-user/azoth-os/Rust?style=flat-square&label=Build" alt="Build Status"></a>
+  <a href="https://github.com/azoth-os/azoth/actions"><img src="https://img.shields.io/github/workflow/status/azoth-os/azoth/Rust?style=flat-square&label=Build" alt="Build Status"></a>
   <img src="https://img.shields.io/badge/arch-x86__64%20|%20arm64-blue?style=flat-square" alt="Architecture">
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
 </p>
