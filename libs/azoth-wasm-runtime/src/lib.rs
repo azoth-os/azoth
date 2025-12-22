@@ -1,1 +1,1 @@
-/! Azoth WebAssembly Runtime 
+//! Azoth WebAssembly Runtime 
