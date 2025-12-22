@@ -4,8 +4,10 @@
 
 <p align="center">
   <a href="https://github.com/azoth-os/azoth/actions"></a>
-  <img src="https://img.shields.io/badge/arch-x86__64%20|%20arm64-blue?style=flat-square" alt="Architecture">
   <img src="https://img.shields.io/badge/operating system%20-purple?style=flat-square" alt="Description">
+
+<img src="https://img.shields.io/badge/arch-x86__64%20|%20arm64-blue?style=flat-square" alt="Architecture">
+  
 </p>
 
 > [!NOTE]
