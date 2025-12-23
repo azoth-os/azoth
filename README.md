@@ -1,6 +1,6 @@
 <img align="right" src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
 
-# _Azoth/Operating/System_
+# _Azoth Operating System_
 
 
 > [!WARNING]
