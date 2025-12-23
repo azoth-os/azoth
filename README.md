@@ -1,5 +1,5 @@
 <div align="center">
-<img style="border-radius:30px;" src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
+<img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
 </div>
 
 # **Azoth*<br/>*Operating*<br/> System ⚛️*
