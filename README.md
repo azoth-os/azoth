@@ -1,8 +1,8 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
+<img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="60%" alt="Azoth OS"/>
 </div>
 
-# **Azoth*<br/>*Operating*<br/> System ⚛️*
+# 
 
 
 > [!WARNING]
