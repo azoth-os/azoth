@@ -6,6 +6,7 @@
 </div> 
 
 [Doc]: https://github.com/azoth-os/azoth
+
 ---
 
 > [!WARNING]
