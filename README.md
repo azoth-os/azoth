@@ -3,6 +3,7 @@
 <h2>☁️ Azoth ☁️</h2>
 
 [Doc] | [Azoth][Azoth Foundation]
+
 </div> 
 
 [Doc]: https://github.com/azoth-os/azoth/docs
