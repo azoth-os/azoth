@@ -1,6 +1,4 @@
-<div align="right">
- <img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
-</div>
+<img align="right" src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
 
 > [!WARNING]
 >
