@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS" />
 <h2>☁️ Azoth ☁️</h2>
 
-[Doc] |
+[Doc] | [Azoth][Azoth Foundation]
 </div> 
 
 [Doc]: https://github.com/azoth-os/azoth/docs
@@ -13,7 +13,7 @@
 >
 > This project is currently under development ! :hammer_and_wrench:
 >
-> *By [@jclermonttt]*.
+> *By [Azoth Foundation]*.
 
 ## 📖 Description
 
@@ -38,60 +38,6 @@
 
 ---
 
-## ⚡ Azoth vs Architecture Classique
-
-### 🏛️ Architecture Classique (Monolithique)
-*Dans un système classique (type Linux/Windows), les pilotes tournent avec les mêmes privilèges que le noyau. Un bug graphique peut faire planter tout le système.*
-
-```mermaid
-graph TD
-    %% --- Styles ---
-    classDef userland fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef kernel fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
-    classDef hardware fill:#424242,stroke:#000000,stroke-width:2px,color:#fff;
-    classDef danger fill:#ffcdd2,stroke:#c62828,stroke-width:2px,stroke-dasharray: 5 5;
-
-    %% --- Espace Utilisateur ---
-    subgraph UserSpace [📱 ESPACE UTILISATEUR]
-        direction LR
-        App[App 'A'<br/>(Binaire Natif)]:::userland
-        Browser[Navigateur]:::userland
-    end
-
-    %% --- Barrière Coûteuse ---
-    ContextSwitch(🐌 Context Switch / Syscalls):::danger
-
-    %% --- Noyau Monolithique ---
-    subgraph KernelSpace [🛡️ NOYAU MONOLITHIQUE (Ring 0)]
-        direction TB
-        
-        %% Le Cœur
-        subgraph Core [Core Kernel]
-            Sched[Ordonnanceur]:::kernel
-            Mem[Gestion Mémoire]:::kernel
-        end
-
-        %% Le Danger : Les pilotes sont DANS le noyau
-        subgraph Drivers [⚠️ PILOTES & SERVICES]
-            GPU[Pilote GPU<br/>(C / C++)]:::kernel
-            FS[Système de<br/>Fichiers]:::kernel
-            Net[Réseau]:::kernel
-        end
-    end
-
-    %% --- Matériel ---
-    subgraph HW [💻 MATÉRIEL]
-        CPU[CPU]:::hardware
-    end
-
-    %% --- Connexions ---
-    App <--> ContextSwitch
-    Browser <--> ContextSwitch
-    ContextSwitch <--> Core
-    Core --- Drivers
-    Drivers <--> CPU
-
-```
-[!Azoth]: https://github.com/azoth-os/azoth/
+[Azoth Foundation]: https://github.com/azoth-os/
 [Athanor]: https://github.com/azoth-os/athanor/
 [@jclermonttt]: http://github.com/jclermonttt
