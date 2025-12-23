@@ -1,4 +1,4 @@
-<img align="right" src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
+<img align="center" style="border-radius: 10px" src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS"/>
 
 # **Azoth*<br/>*Operating*<br/> System ⚛️*
 
