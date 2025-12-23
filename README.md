@@ -1,9 +1,7 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="60%" alt="Azoth OS"/>
-</div>
-
-# 
-
+ <h3>Azoth Operating System<h3>
+</div> 
 
 > [!WARNING]
 >
