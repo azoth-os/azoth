@@ -1,11 +1,9 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="60%" alt="Azoth OS"/>
-
 <h2>☁️ Azoth ☁️<h2>
+</div> 
 
 ---
-
-</div> 
 
 > [!WARNING]
 >
