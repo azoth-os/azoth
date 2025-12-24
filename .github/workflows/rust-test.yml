@@ -2,9 +2,9 @@ name: rust-test
 
 on:
   push:
-    branches: [ "nightly" ]
+    branches: [ "beta" ]
   pull_request:
-    branches: [ "nightly" ]
+    branches: [ "beta" ]
 
 env:
   CARGO_TERM_COLOR: always
