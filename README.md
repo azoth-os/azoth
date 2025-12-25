@@ -28,6 +28,8 @@
 * **IPC Natif :** Communication inter-processus à une vitesse proche de l'appel de fonction direct (Zero-Copy).
 * **Green IT :** Réduction drastique des cycles CPU perdus, idéal pour l'embarqué et la consommation d'énergie.
 
+* **Single Address Space (SAS) :** Tous les processus partagent le même espace d'adressage virtuel (rendu sûr par le compilateur et non par le MMU), éliminant le TLB thrashing.
+
 ### 2. Sécurité par la Preuve (Security)
 * **Memory Safety :** Intégrité mémoire garantie par le système de *Ownership* de Rust.
 * **Surface Minimale :** Application stricte du principe de moindre privilège via le noyau **Athanor**.
