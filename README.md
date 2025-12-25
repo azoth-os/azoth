@@ -38,6 +38,8 @@
 * **Anti-Tracking :** Minimisation des fuites d'informations latérales (Side-Channel) grâce au sandboxing Wasm.
 * **État Éphémère :** Capacité de réinitialiser la mémoire d'un service suspect instantanément sans redémarrer l'OS.
 
+* **Data Sovereignty :** Chiffrement transparent des données au repos et en transit entre les modules, avec des clés gérées localement (pas de cloud).
+
 ---
 
 [Azoth Foundation]: https://github.com/azoth-os/
