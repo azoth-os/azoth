@@ -1,21 +1,22 @@
-<div align="center">
-<picture>
-<img src="https://raw.githubusercontent.com/azoth-os/.github/main/icons/azoth-v3.jpg" width="50%" alt="Azoth OS">
-</picture>
-<h2>☁️ Azoth ☁️</h2>
+<img align="right" src="https://raw.githubusercontent.com/azoth-os/.github/refs/heads/main/icons/azoth-v3.jpg" width="45%" />
 
-[Doc] | [Azoth][Azoth Foundation]
+# *Azoth* 🔥 The Operating System
 
-</div> 
+> [!WARNING]
+>
+> Ce répertoire est en cours de développement actif 🛠️ (Pre-alpha) ⏳. Les APIs internes sont sujettes à des modifications fréquentes 🔄.
+
+<a href="https://github.com/azoth-os/athanor/actions/workflows/cargo-build.yml">
+  <img src="https://github.com/azoth-os/athanor/actions/workflows/cargo-build.yml/badge.svg" alt="Build Status"/>
+</a>
+
+<br clear="all" />
+
+---
 
 [Doc]: https://github.com/azoth-os/azoth/docs
 
 
-> [!WARNING]
->
-> This project is currently under development ! :hammer_and_wrench:
->
-> *By [Azoth Foundation]*.
 
 ## 📖 Description
 
