@@ -1,1 +1,0 @@
-# Azoth WebAssembly Runtime

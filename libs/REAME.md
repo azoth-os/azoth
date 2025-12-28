@@ -1,1 +1,1 @@
-# 📦 Azoth Shared Libraries
+# 📦 Azoth Shared Libraries 📦
