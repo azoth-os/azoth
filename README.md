@@ -12,10 +12,6 @@
 
 <br clear="all" />
 
----
-
-[Doc]: https://github.com/azoth-os/azoth/docs
-
 ## 📖 Description
 
 **Azoth-OS** est un système d'exploitation de nouvelle génération conçu pour éliminer le compromis historique entre vitesse et sécurité. Il repose sur **Athanor**, un micro-noyau minimaliste écrit en Rust, et utilise l'isolation logicielle (SFI) via WebAssembly pour sécuriser ses pilotes et applications sans sacrifier les performances.
@@ -42,12 +38,8 @@
 * **Data Sovereignty :** Chiffrement transparent des données au repos et en transit entre les modules, avec des clés gérées localement (pas de cloud).
 
 ## 4. Résilience et Maintenance (Reliability)
-Atomic Hot-Swapping : Capacité de mettre à jour des modules (drivers ou services) à chaud, sans redémarrage du système, grâce à l'architecture modulaire de WebAssembly.
-Micro-Recovery : En cas de crash d'un module (panic), le système le redémarre en quelques millisecondes (le temps de réinstancier la VM Wasm) sans affecter le reste de l'OS.
-Supervision Trees : Architecture inspirée d'Erlang où des processus superviseurs gèrent les pannes des processus enfants automatiquement.
+* **Atomic Hot-Swapping :** Capacité de mettre à jour des modules (drivers ou services) à chaud, sans redémarrage du système, grâce à l'architecture modulaire de WebAssembly.
+* **Micro-Recovery :** En cas de crash d'un module (panic), le système le redémarre en quelques millisecondes (le temps de réinstancier la VM Wasm) sans affecter le reste de l'OS.
+* **Supervision Trees :** Architecture inspirée d'Erlang où des processus superviseurs gèrent les pannes des processus enfants automatiquement.
 
 ---
-
-[Azoth Foundation]: https://github.com/azoth-os/
-[Athanor]: https://github.com/azoth-os/athanor/
-[@jclermonttt]: http://github.com/jclermonttt
